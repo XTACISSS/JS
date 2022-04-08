@@ -6,5 +6,13 @@ function identifica( param ){
 
 }
 
+function Persona(){
 
-identifica( {} );
+
+
+}
+
+var juan = new Persona();
+
+
+identifica( function(){} );  // Se pueden mandar obj, funciones, numers, boolean, string, etc.
