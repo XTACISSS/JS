@@ -1,21 +1,17 @@
+let personas = []  // Esto es un arreglo (Array). Los arreglos son una coleccion de datos.
 
+var arr = [5, 4, 3, 2, 1];  // Esto es una manera mas corta de hacer arreglos. []  Estas llaves son arreglos. La primera posicion es 0, es decir 0, 1, 2, 3, 4.
 
-function identifica( param ){
+console.log( arr );
 
-    console.log( typeof param);  // Esto imprime el tipo de parametro que le pases a la funcion
+console.log( arr[4], arr[0] );
 
-    console.log( param instanceof Persona );  // Esto regresa un true o false dependiendo si el parametro es de tipo "Persona"
- 
-}
+arr.reverse();  // Esto invierte el arreglo, quedaria en 1, 2, 3, 4, 5.
 
-function Persona(){
+console.log( arr );
 
-    this.nombre = "Rodrigo";
-    this.edad = 20;
+arr = arr.map( function( elem ){
+    
+    elem = elem * 2;
 
-}
-
-var rodrigo = new Persona();
-
-
-identifica( rodrigo );  // Se pueden mandar obj, funciones, numbers, boolean, string, etc.
+} );
