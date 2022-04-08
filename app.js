@@ -6,15 +6,23 @@ console.log( arr );
 
 console.log( arr[4], arr[0] );
 
-//arr.reverse();  // Esto invierte el arreglo, quedaria en 1, 2, 3, 4, 5.
+arr.reverse();  // Esto invierte el arreglo, quedaria en 1, 2, 3, 4, 5.
 
 console.log( arr );
 
 arr = arr.map( function( elem ){  // Esto recorre (arr.map) el arreglo y lo guarda en la variable elem y luego multiplica elem por 2 y retorna en nuevo valor de elem.
     
-    elem = elem * 2;
+    elem = elem * elem;
     return elem;
 
 } );
+
+console.log( arr );
+
+arr = arr.map ( Math.sqrt );  // Esto hace lo mismo que el de arriba, solo que lo multiplica por su raiz cuadrada.
+
+console.log( arr );
+
+arr = arr.join("|");  // Esto sirve para separar el arreglo con lo que nosotros le entreguemos dentro de los ().
 
 console.log( arr );
