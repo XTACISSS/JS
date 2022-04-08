@@ -1,94 +1,31 @@
-function Jugador( nombre ){
+function Persona() {
 
-    this.nombre = nombre;
-    this.pv = 100;  // Puntos de vida
-    this.sp = 100;  // Special Point
+    this.nombre = "Rodrigo";
+    this.apellido = "Salinas";
+    this.edad = 20;
+    this.pais = "Chile";
 
+}
 
-    this.curarJugador = function( jugadorObjetivo ){
+Persona.prototype.imprimirInfo = function () {
 
-        if( this.sp >= 40 ){
+    this.imprimirInfo = function () {
 
-            jugadorObjetivo.pv = jugadorObjetivo.pv + 20;
-
-            this.sp = this.sp - 40;
-
-        }
-        else{
-
-            console.info( this.nombre + " No te quedan Special Points!" )
-
-        }
-        
-        this.estado( jugadorObjetivo );
-        
-    }
-
-    this.tirarFlecha = function(jugadorObjetivo){
-
-        if( jugadorObjetivo.pv > 40 ){
-
-            jugadorObjetivo.pv = jugadorObjetivo.pv - 40;
-
-        }
-        else{
-
-            jugadorObjetivo.pv = 0;    
-            
-            console.error( jugadorObjetivo.nombre + " Ha muerto! :(" );
-
-        }
-        
-
-        this.estado( jugadorObjetivo, jugadorObjetivo2 );
-
-    }
-
-    this.atacarEspada = function( jugadorObjetivo ){
-
-        if( jugadorObjetivo.pv > 30 && this.sp > 30 ){
-
-            jugadorObjetivo.pv = jugadorObjetivo.pv - 40;
-
-            this.sp = this.sp - 30;
-
-        }
-        else if( this.sp < 30 ){
-
-            console.info( this.nombre + " No te quedan SP" );
-
-        }
-        else{
-
-            jugadorObjetivo.pv = 0;
-
-            console.error( jugadorObjetivo.nombre + " Ha muerto!" );
-
-        }
-
-        this.estado(jugadorObjetivo);
-
-    }
-
-    this.estado = function( jugadorObjetivo ){
-
-        console.info( this );
-        console.info( jugadorObjetivo );
-        
+        console.log( this.nombre + " " + this.apellido + " (" + this.edad +")" );
 
     }
 
 }
 
+// Persona.prototype.pais = "Chile"; Guardando una propiedad dentro del prototipo
 
+var rod = new Persona();  // Esto crea una nueva instancia de "Persona".
 
-var gandalf = new Jugador( "Gandalf" );
-var legolas = new Jugador( "Legolas" );
-var aragon = new Jugador( "Aragon" );
+/* console.log(rod);
+   console.log(rod.pais);  Cuando JS busca una propiedad que no esta dentro del constructor la busca en los prototipos y si la encuentra, la trae */
 
-console.log( gandalf );
-console.log( legolas );
-console.log( aragon );
+// rod.imprimirInfo();  Esto es para llamar al metodo a traves de la variable "rod".
 
+console.log(rod);
+console.log(rod.imprimirInfo());
 
-// gandalf.curarJugador( legolas );   Cura al jugador
