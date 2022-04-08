@@ -2,17 +2,10 @@
 
 function identifica( param ){
 
-    // console.log( typeof param);  // Esto imprime el tipo de parametro que le pases a la funcion
+    console.log( typeof param);  // Esto imprime el tipo de parametro que le pases a la funcion
 
-    if( typeof param === "function" ){
-
-        param();
-    }
-    else{
-
-        console.log( param );
-
-    }
+    console.log( param instanceof Persona );  // Esto regresa un true o false dependiendo si el parametro es de tipo "Persona"
+ 
 }
 
 function Persona(){
