@@ -1,19 +1,29 @@
+// Las funciones anonimas se crean al momento de invocar a una funcion, que esta pidiendo otra funcion (esta seria la anonima) y no guardan nada dentro del objeto global window.
 
-( function(){    // Esto es una funcion anonima.
+function ejecutarFuncion( fn ){
 
-    var a = 10;
+    if( fn() === 1 ){
 
-    console.log( a );
+        return true;
+        
+    }
+    else{
 
-    function cambiarA(){
-
-        a = 20;
+        return false;
 
     }
 
-    cambiarA();
 
-    console.log( a );
+}
 
-} )();
+console.log( 
+
+    ejecutarFuncion( function(){   // Esto es una funcion anonima
+    
+        console.log( "Estoy funcionando :D" );
+        return 1;
+    
+    } )
+
+ );
 
