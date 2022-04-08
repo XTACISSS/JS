@@ -29,3 +29,17 @@ var rod = new Persona();  // Esto crea una nueva instancia de "Persona".
 console.log(rod);
 console.log(rod.imprimirInfo());
 
+Number.prototype.esPositivo = function(){
+
+    if (this > 0) {
+    
+        return true;
+
+    }
+    else{
+
+        return false;
+
+    }
+
+}
