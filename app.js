@@ -1,16 +1,40 @@
-var arguments = 10;
+// Una funcion polimorficas son las que pueden recibir diferentes tipos de parametros o diferente tipo de datos
 
-function miFuncion(a, b, c, d){
+function determinaDato(a) {
 
-    if( arguments.length !== 4 ){   // Si la funcion es distinta a 4 se ejecuta lo que tiene dentro.
+    if (a == undefined) {
 
-        console.error( "La fucion necesita 4 parametros!" );
-        return;
+        console.log('A Es undefined... no se que hacer xD');
 
     }
 
-    console.log( a + b + c + d );
+    if (typeof a == 'number') {
+
+        console.log('A es un numero, puedo hacer operaciones con numeros');
+
+    }
+
+    if (typeof a == 'string') {
+
+        console.log('A es un texto, puedo hacer operaciones con textos')
+
+    }
+
+    if (typeof a == 'object') {
+
+        console.log('A es un objeto, pero puede ser cualquier cosa');
+
+        if (a instanceof Number) {
+
+            console.log('A es un objeto de tipo numerico');
+
+        }
+
+    }
+
 
 }
 
-miFuncion(10, 20, 30, 40, 50, 60);  // Si mandamos algo distinto a 4 argumentos la funcion no se ejecutara
+var b = new Number(3);
+
+determinaDato(b);
