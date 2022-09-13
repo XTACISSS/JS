@@ -1,4 +1,5 @@
-// TypeSctipt convierte codigo desde .ts a .js, para que pueda ser soportado en casi cualquier entorno. Esta casi totalmente orientado a objetos 
+// TypeSctipt es un lenguaje de tipado estricto, que convierte codigo desde .ts a .js, para que pueda ser soportado en casi cualquier entorno. Esta casi totalmente orientado a objetos 
+// TypeScript es un super set de JS
 
 console.log("Hola mundo");
 
