@@ -1,4 +1,4 @@
-// Una funcion polimorficas son las que pueden recibir diferentes tipos de parametros o diferente tipo de datos
+//? Una funcion polimorficas son las que pueden recibir diferentes tipos de parametros o diferente tipo de datos
 
 function determinaDato(a) {
 
