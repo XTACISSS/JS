@@ -1,10 +1,15 @@
-function evento(arg) {
-    console.log('Me dispare');
-    console.log(arg);
+function validar() {
+    let nombre = document.getElementById('txtNombre').value;
+    let apellido = document.getElementById('txtApellido').value;
+
+    if (nombre.length < 1) {
+        return false;
+    }
+    if (apellido.length < 1) {
+        return false;
+    }
+
+    return true;
 }
 
-//? Con esto estoy indicando que quiero guardar el elemento por id dentro de una variable
-let objeto = document.getElementById('objDemo');
-
-//? Aqui estoy agregando un evento a mi variable objeto que guarda el elemento html, mando el evento keypress que dispara mi funcion evento cuando presiono una tecla dentro de la caja de texto
-objeto.addEventListener('click', evento);
+console.log(window.location.search);

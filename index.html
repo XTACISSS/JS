@@ -10,7 +10,7 @@
 
 <body>
     <!--? Este es un evento onclick y se dispara cuando hagamos click en el boton -->
-    <button onclick="evento()">Soy un boton</button>
+    <button onclick="evento()">Soy un botón</button>
 
     <!--? Este es un evento onfocus y se dispara cuando la caja de texto agarra el foco -->
     <input type="text" name="" id="" onfocus="evento()" />
@@ -18,7 +18,15 @@
     <!--? Este es un evento onblur y se dispara cuando la caja de texto pierda el foco -->
     <input type="text" name="" id="" onblur="evento()" />
 
-    <button type="text" name="" id="objDemo">Boton</button>
+    <button type="text" name="" id="objDemo">Botón</button>
+
+    <form action="" onsubmit="return validar();">
+        <input type="text" id="txtNombre" name="txtNombre" />
+
+        <input type="text" id="txtApellido" name="txtApellido" />
+
+        <button type="submit">Enviar data</button>
+    </form>
 
     <script src="app.js"></script>
 </body>
