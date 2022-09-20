@@ -1,3 +1,5 @@
-let nombre = prompt('Ingrese su nombre: ', 'nombre');
+'use strict';
+
+nombre = 'rodrigo';
 
 console.log(nombre);
